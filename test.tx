@@ -1,0 +1,375 @@
+/* eslint-disable @next/next/no-img-element */
+ //card
+"use client";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Lens } from "@/components/magicui/lens";
+ 
+export function LensDemo() {
+  return (
+    <Card className="relative max-w-md shadow-none">
+      <CardHeader>
+        <Lens
+          zoomFactor={2}
+          lensSize={150}
+          isStatic={false}
+          ariaLabel="Zoom Area"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1736606355698-5efdb410fe93?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="image placeholder"
+            width={500}
+            height={500}
+          />
+        </Lens>
+      </CardHeader>
+      <CardContent>
+        <CardTitle className="text-2xl">Your next camp</CardTitle>
+        <CardDescription>
+          See our latest and best camp destinations all across the five
+          continents of the globe.
+        </CardDescription>
+      </CardContent>
+      <CardFooter className="space-x-4">
+        <Button>Let&apos;s go</Button>
+        <Button variant="secondary">Another time</Button>
+      </CardFooter>
+    </Card>
+  );
+}
+
+
+//formulaire
+
+
+
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { BorderBeam } from "@/components/magicui/border-beam";
+
+export function Component() {
+  return (
+    <Card className="relative w-[350px] overflow-hidden">
+      <CardHeader>
+        <CardTitle>Login</CardTitle>
+        <CardDescription>
+          Enter your credentials to access your account.
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <form>
+          <div className="grid w-full items-center gap-4">
+            <div className="flex flex-col space-y-1.5">
+              <Label htmlFor="email">Email</Label>
+              <Input id="email" type="email" placeholder="Enter your email" />
+            </div>
+            <div className="flex flex-col space-y-1.5">
+              <Label htmlFor="password">Password</Label>
+              <Input
+                id="password"
+                type="password"
+                placeholder="Enter your password"
+              />
+            </div>
+          </div>
+        </form>
+      </CardContent>
+      <CardFooter className="flex justify-between">
+        <Button variant="outline">Register</Button>
+        <Button>Login</Button>
+      </CardFooter>
+      <BorderBeam duration={8} size={100} />
+    </Card>
+  );
+}
+
+
+//product view_week
+
+<div>
+      <div class="grid items-start grid-cols-1 lg:grid-cols-3">
+        <div class="col-span-2 grid grid-cols-2 lg:sticky top-0 gap-0.5">
+          <div class="columns-2 gap-0.5 space-y-0.5">
+            <div class="overflow-hidden">
+              <img src="https://readymadeui.com/images/product6.webp" alt="Product" class="w-full aspect-[253/337] object-cover object-top shadow-md hover:scale-[1.05] transition-all duration-300" />
+            </div>
+            <div class="overflow-hidden">
+              <img src="https://readymadeui.com/images/product3.webp" alt="Product" class="w-full aspect-[253/337] object-cover object-top shadow-md hover:scale-[1.05] transition-all duration-300" />
+            </div>
+            <div class="overflow-hidden">
+              <img src="https://readymadeui.com/images/product5.webp" alt="Product" class="w-full aspect-[253/337] object-cover object-top shadow-md hover:scale-[1.05] transition-all duration-300" />
+            </div>
+            <div class="overflow-hidden">
+              <img src="https://readymadeui.com/images/product2.webp" alt="Product" class="w-full aspect-[253/337] object-cover object-top shadow-md hover:scale-[1.05] transition-all duration-300" />
+            </div>
+          </div>
+          <div class="overflow-hidden">
+            <img src="https://readymadeui.com/images/product6.webp" alt="Product" class="w-full aspect-[3/4] object-cover object-top shadow-md hover:scale-[1.05] transition-all duration-300" />
+          </div>
+        </div>
+
+        <div class="py-6 px-8 max-lg:max-w-2xl">
+          <div>
+            <h2 class="text-xl font-semibold text-slate-900">Adjective Attire | T-shirt</h2>
+            <p class="text-sm text-slate-500 mt-2">Well-Versed Commerce</p>
+          </div>
+
+          <div class="flex items-center space-x-1 mt-6">
+            <svg class="w-4 h-4 fill-slate-800" viewBox="0 0 14 13" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+            </svg>
+            <svg class="w-4 h-4 fill-slate-800" viewBox="0 0 14 13" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+            </svg>
+            <svg class="w-4 h-4 fill-slate-800" viewBox="0 0 14 13" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+            </svg>
+            <svg class="w-4 h-4 fill-slate-800" viewBox="0 0 14 13" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+            </svg>
+            <svg class="w-4 h-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+            </svg>
+
+            <button type="button" class="px-2.5 py-1.5 bg-slate-100 text-xs text-slate-900 rounded-md flex items-center cursor-pointer !ml-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3 mr-1" fill="currentColor" viewBox="0 0 32 32">
+                <path d="M14.236 21.954h-3.6c-.91 0-1.65-.74-1.65-1.65v-7.201c0-.91.74-1.65 1.65-1.65h3.6a.75.75 0 0 1 .75.75v9.001a.75.75 0 0 1-.75.75zm-3.6-9.001a.15.15 0 0 0-.15.15v7.2a.15.15 0 0 0 .15.151h2.85v-7.501z" data-original="#000000" />
+                <path d="M20.52 21.954h-6.284a.75.75 0 0 1-.75-.75v-9.001c0-.257.132-.495.348-.633.017-.011 1.717-1.118 2.037-3.25.18-1.184 1.118-2.089 2.28-2.201a2.557 2.557 0 0 1 2.17.868c.489.56.71 1.305.609 2.042a9.468 9.468 0 0 1-.678 2.424h.943a2.56 2.56 0 0 1 1.918.862c.483.547.708 1.279.617 2.006l-.675 5.401a2.565 2.565 0 0 1-2.535 2.232zm-5.534-1.5h5.533a1.06 1.06 0 0 0 1.048-.922l.675-5.397a1.046 1.046 0 0 0-1.047-1.182h-2.16a.751.751 0 0 1-.648-1.13 8.147 8.147 0 0 0 1.057-3 1.059 1.059 0 0 0-.254-.852 1.057 1.057 0 0 0-.795-.365c-.577.052-.964.435-1.04.938-.326 2.163-1.71 3.507-2.369 4.036v7.874z" data-original="#000000" />
+                <path d="M4 31.75a.75.75 0 0 1-.612-1.184c1.014-1.428 1.643-2.999 1.869-4.667.032-.241.055-.485.07-.719A14.701 14.701 0 0 1 1.25 15C1.25 6.867 7.867.25 16 .25S30.75 6.867 30.75 15 24.133 29.75 16 29.75a14.57 14.57 0 0 1-5.594-1.101c-2.179 2.045-4.61 2.81-6.281 3.09A.774.774 0 0 1 4 31.75zm12-30C8.694 1.75 2.75 7.694 2.75 15c0 3.52 1.375 6.845 3.872 9.362a.75.75 0 0 1 .217.55c-.01.373-.042.78-.095 1.186A11.715 11.715 0 0 1 5.58 29.83a10.387 10.387 0 0 0 3.898-2.37l.231-.23a.75.75 0 0 1 .84-.153A13.072 13.072 0 0 0 16 28.25c7.306 0 13.25-5.944 13.25-13.25S23.306 1.75 16 1.75z" data-original="#000000" />
+              </svg>
+              87 Reviews
+            </button>
+          </div>
+
+          <div class="mt-8">
+            <div class="flex items-center flex-wrap gap-4">
+              <p class="text-slate-900 text-4xl font-semibold">$30</p>
+              <p class="text-slate-400 text-sm mt-2"><strike>$42</strike> <span class="ml-1">Tax included</span></p>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <h3 class="text-xl font-semibold text-slate-900">Choose a Size</h3>
+            <div class="flex flex-wrap gap-4 mt-4">
+              <button type="button" class="w-10 h-10 cursor-pointer border hover:border-slate-800 border-gray-300 font-semibold text-slate-900 text-sm rounded-full flex items-center justify-center shrink-0">SM</button>
+              <button type="button" class="w-10 h-10 cursor-pointer border hover:border-slate-800 border-slate-800 font-semibold text-slate-900 text-sm rounded-full flex items-center justify-center shrink-0">MD</button>
+              <button type="button" class="w-10 h-10 cursor-pointer border hover:border-slate-800 border-gray-300 font-semibold text-slate-900 text-sm rounded-full flex items-center justify-center shrink-0">LG</button>
+              <button type="button" class="w-10 h-10 cursor-pointer border hover:border-slate-800 border-gray-300 font-semibold text-slate-900 text-sm rounded-full flex items-center justify-center shrink-0">XL</button>
+            </div>
+          </div>
+
+          <div class="mt-8 space-y-4">
+            <button type="button" class="w-full px-4 py-2.5 cursor-pointer border border-slate-800 bg-transparent hover:bg-slate-50 text-slate-900 text-sm font-medium rounded-md">Add to cart</button>
+            <button type="button" class="w-full px-4 py-2.5 cursor-pointer border border-slate-800 bg-slate-800 hover:bg-slate-900 text-white text-sm font-medium rounded-md">Buy now</button>
+          </div>
+
+          <div class="mt-8">
+            <div>
+              <h3 class="text-xl font-semibold text-slate-900">Product Description</h3>
+              <p class="text-sm text-slate-500 mt-4">Elevate your casual style with our premium men's t-shirt. Crafted for comfort and designed with a modern fit, this versatile shirt is an essential addition to your wardrobe. The soft and breathable fabric ensures all-day comfort, making it perfect for everyday wear. Its classic crew neck and short sleeves offer a timeless look.</p>
+            </div>
+
+            <ul class="space-y-3 list-disc mt-4 pl-4 text-sm text-slate-500">
+              <li>A t-shirt is a wardrobe essential because it is so versatile.</li>
+              <li>Available in a wide range of sizes, from extra small to extra large, and even in tall and petite sizes.</li>
+              <li>This is easy to care for. They can usually be machine-washed and dried on low heat.</li>
+              <li>You can add your own designs, paintings, or embroidery to make it your own.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    ///pannier
+
+
+    <div class="max-w-5xl max-lg:max-w-2xl mx-auto p-4">
+          <h1 class="text-xl font-semibold text-slate-900">Shopping Cart</h1>
+          <div class="grid lg:grid-cols-3 lg:gap-x-8 gap-x-6 gap-y-8 mt-6">
+              <div class="lg:col-span-2 space-y-6">
+                  <div class="flex gap-4 bg-white px-4 py-6 rounded-md shadow-sm border border-gray-200">
+                      <div class="flex gap-6 sm:gap-4 max-sm:flex-col">
+                          <div class="w-24 h-24 max-sm:w-24 max-sm:h-24 shrink-0">
+                              <img src='https://readymadeui.com/images/watch1.webp' class="w-full h-full object-contain" />
+                          </div>
+                          <div class="flex flex-col gap-4">
+                              <div>
+                                  <h3 class="text-sm sm:text-base font-semibold text-slate-900">Stylish Golden Watch</h3>
+                                  <p class="text-[13px] font-medium text-slate-500 mt-2 flex items-center gap-2">Color: <span class="inline-block w-4 h-4 rounded-sm bg-[#ac7f48]"></span></p>
+                              </div>
+                              <div class="mt-auto">
+                                  <h3 class="text-sm font-semibold text-slate-900">$120.00</h3>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="ml-auto flex flex-col">
+                          <div class="flex items-start gap-4 justify-end">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 cursor-pointer fill-slate-400 hover:fill-pink-600 inline-block" viewBox="0 0 64 64">
+                                  <path d="M45.5 4A18.53 18.53 0 0 0 32 9.86 18.5 18.5 0 0 0 0 22.5C0 40.92 29.71 59 31 59.71a2 2 0 0 0 2.06 0C34.29 59 64 40.92 64 22.5A18.52 18.52 0 0 0 45.5 4ZM32 55.64C26.83 52.34 4 36.92 4 22.5a14.5 14.5 0 0 1 26.36-8.33 2 2 0 0 0 3.27 0A14.5 14.5 0 0 1 60 22.5c0 14.41-22.83 29.83-28 33.14Z" data-original="#000000"></path>
+                              </svg>
+
+                              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 cursor-pointer fill-slate-400 hover:fill-red-600 inline-block" viewBox="0 0 24 24">
+                                  <path d="M19 7a1 1 0 0 0-1 1v11.191A1.92 1.92 0 0 1 15.99 21H8.01A1.92 1.92 0 0 1 6 19.191V8a1 1 0 0 0-2 0v11.191A3.918 3.918 0 0 0 8.01 23h7.98A3.918 3.918 0 0 0 20 19.191V8a1 1 0 0 0-1-1Zm1-3h-4V2a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v2H4a1 1 0 0 0 0 2h16a1 1 0 0 0 0-2ZM10 4V3h4v1Z" data-original="#000000"></path>
+                                  <path d="M11 17v-7a1 1 0 0 0-2 0v7a1 1 0 0 0 2 0Zm4 0v-7a1 1 0 0 0-2 0v7a1 1 0 0 0 2 0Z" data-original="#000000"></path>
+                              </svg>
+                          </div>
+                          <div class="flex items-center gap-3 mt-auto">
+                              <button type="button"
+                                  class="flex items-center justify-center w-[18px] h-[18px] cursor-pointer bg-slate-400 outline-none rounded-full">
+                                  <svg xmlns="http://www.w3.org/2000/svg" class="w-2 fill-white" viewBox="0 0 124 124">
+                                      <path d="M112 50H12C5.4 50 0 55.4 0 62s5.4 12 12 12h100c6.6 0 12-5.4 12-12s-5.4-12-12-12z" data-original="#000000"></path>
+                                  </svg>
+                              </button>
+                              <span class="font-semibold text-base leading-[18px]">2</span>
+                              <button type="button"
+                                  class="flex items-center justify-center w-[18px] h-[18px] cursor-pointer bg-slate-800 outline-none rounded-full">
+                                  <svg xmlns="http://www.w3.org/2000/svg" class="w-2 fill-white" viewBox="0 0 42 42">
+                                      <path d="M37.059 16H26V4.941C26 2.224 23.718 0 21 0s-5 2.224-5 4.941V16H4.941C2.224 16 0 18.282 0 21s2.224 5 4.941 5H16v11.059C16 39.776 18.282 42 21 42s5-2.224 5-4.941V26h11.059C39.776 26 42 23.718 42 21s-2.224-5-4.941-5z" data-original="#000000"></path>
+                                  </svg>
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="flex gap-4 bg-white px-4 py-6 rounded-md shadow-sm border border-gray-200">
+                      <div class="flex gap-6 sm:gap-4 max-sm:flex-col">
+                          <div class="w-24 h-24 max-sm:w-24 max-sm:h-24 shrink-0">
+                              <img src='https://readymadeui.com/images/watch5.webp' class="w-full h-full object-contain" />
+                          </div>
+                          <div class="flex flex-col gap-4">
+                              <div>
+                                  <h3 class="text-sm sm:text-base font-semibold text-slate-900">Stylish Smart Watch</h3>
+                                  <p class="text-[13px] font-medium text-slate-500 mt-2 flex items-center gap-2">Color: <span class="inline-block w-4 h-4 rounded-sm bg-[#e8dcdc]"></span></p>
+                              </div>
+                              <div class="mt-auto">
+                                  <h3 class="text-sm font-semibold text-slate-900">$70.00</h3>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="ml-auto flex flex-col">
+                          <div class="flex items-start gap-4 justify-end">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 cursor-pointer fill-slate-400 hover:fill-pink-600 inline-block" viewBox="0 0 64 64">
+                                  <path d="M45.5 4A18.53 18.53 0 0 0 32 9.86 18.5 18.5 0 0 0 0 22.5C0 40.92 29.71 59 31 59.71a2 2 0 0 0 2.06 0C34.29 59 64 40.92 64 22.5A18.52 18.52 0 0 0 45.5 4ZM32 55.64C26.83 52.34 4 36.92 4 22.5a14.5 14.5 0 0 1 26.36-8.33 2 2 0 0 0 3.27 0A14.5 14.5 0 0 1 60 22.5c0 14.41-22.83 29.83-28 33.14Z" data-original="#000000"></path>
+                              </svg>
+
+                              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 cursor-pointer fill-slate-400 hover:fill-red-600 inline-block" viewBox="0 0 24 24">
+                                  <path d="M19 7a1 1 0 0 0-1 1v11.191A1.92 1.92 0 0 1 15.99 21H8.01A1.92 1.92 0 0 1 6 19.191V8a1 1 0 0 0-2 0v11.191A3.918 3.918 0 0 0 8.01 23h7.98A3.918 3.918 0 0 0 20 19.191V8a1 1 0 0 0-1-1Zm1-3h-4V2a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v2H4a1 1 0 0 0 0 2h16a1 1 0 0 0 0-2ZM10 4V3h4v1Z" data-original="#000000"></path>
+                                  <path d="M11 17v-7a1 1 0 0 0-2 0v7a1 1 0 0 0 2 0Zm4 0v-7a1 1 0 0 0-2 0v7a1 1 0 0 0 2 0Z" data-original="#000000"></path>
+                              </svg>
+                          </div>
+                          <div class="flex items-center gap-3 mt-auto">
+                              <button type="button"
+                                  class="flex items-center justify-center w-[18px] h-[18px] cursor-pointer bg-slate-400 outline-none rounded-full">
+                                  <svg xmlns="http://www.w3.org/2000/svg" class="w-2 fill-white" viewBox="0 0 124 124">
+                                      <path d="M112 50H12C5.4 50 0 55.4 0 62s5.4 12 12 12h100c6.6 0 12-5.4 12-12s-5.4-12-12-12z" data-original="#000000"></path>
+                                  </svg>
+                              </button>
+                              <span class="font-semibold text-base leading-[18px]">1</span>
+                              <button type="button"
+                                  class="flex items-center justify-center w-[18px] h-[18px] cursor-pointer bg-slate-800 outline-none rounded-full">
+                                  <svg xmlns="http://www.w3.org/2000/svg" class="w-2 fill-white" viewBox="0 0 42 42">
+                                      <path d="M37.059 16H26V4.941C26 2.224 23.718 0 21 0s-5 2.224-5 4.941V16H4.941C2.224 16 0 18.282 0 21s2.224 5 4.941 5H16v11.059C16 39.776 18.282 42 21 42s5-2.224 5-4.941V26h11.059C39.776 26 42 23.718 42 21s-2.224-5-4.941-5z" data-original="#000000"></path>
+                                  </svg>
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="flex gap-4 bg-white px-4 py-6 rounded-md shadow-sm border border-gray-200">
+                      <div class="flex gap-6 sm:gap-4 max-sm:flex-col">
+                          <div class="w-24 h-24 max-sm:w-24 max-sm:h-24 shrink-0">
+                              <img src='https://readymadeui.com/images/sunglass6.webp' class="w-full h-full object-contain" />
+                          </div>
+                          <div class="flex flex-col gap-4">
+                              <div>
+                                  <h3 class="text-sm sm:text-base font-semibold text-slate-900">Round Glass</h3>
+                                  <p class="text-[13px] font-medium text-slate-500 mt-2 flex items-center gap-2">Color: <span class="inline-block w-4 h-4 rounded-sm bg-black"></span></p>
+                              </div>
+                              <div class="mt-auto">
+                                  <h3 class="text-sm font-semibold text-slate-900">$20.00</h3>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="ml-auto flex flex-col">
+                          <div class="flex items-start gap-4 justify-end">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 cursor-pointer fill-slate-400 hover:fill-pink-600 inline-block" viewBox="0 0 64 64">
+                                  <path d="M45.5 4A18.53 18.53 0 0 0 32 9.86 18.5 18.5 0 0 0 0 22.5C0 40.92 29.71 59 31 59.71a2 2 0 0 0 2.06 0C34.29 59 64 40.92 64 22.5A18.52 18.52 0 0 0 45.5 4ZM32 55.64C26.83 52.34 4 36.92 4 22.5a14.5 14.5 0 0 1 26.36-8.33 2 2 0 0 0 3.27 0A14.5 14.5 0 0 1 60 22.5c0 14.41-22.83 29.83-28 33.14Z" data-original="#000000"></path>
+                              </svg>
+
+                              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 cursor-pointer fill-slate-400 hover:fill-red-600 inline-block" viewBox="0 0 24 24">
+                                  <path d="M19 7a1 1 0 0 0-1 1v11.191A1.92 1.92 0 0 1 15.99 21H8.01A1.92 1.92 0 0 1 6 19.191V8a1 1 0 0 0-2 0v11.191A3.918 3.918 0 0 0 8.01 23h7.98A3.918 3.918 0 0 0 20 19.191V8a1 1 0 0 0-1-1Zm1-3h-4V2a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v2H4a1 1 0 0 0 0 2h16a1 1 0 0 0 0-2ZM10 4V3h4v1Z" data-original="#000000"></path>
+                                  <path d="M11 17v-7a1 1 0 0 0-2 0v7a1 1 0 0 0 2 0Zm4 0v-7a1 1 0 0 0-2 0v7a1 1 0 0 0 2 0Z" data-original="#000000"></path>
+                              </svg>
+                          </div>
+                          <div class="flex items-center gap-3 mt-auto">
+                              <button type="button"
+                                  class="flex items-center justify-center w-[18px] h-[18px] cursor-pointer bg-slate-400 outline-none rounded-full">
+                                  <svg xmlns="http://www.w3.org/2000/svg" class="w-2 fill-white" viewBox="0 0 124 124">
+                                      <path d="M112 50H12C5.4 50 0 55.4 0 62s5.4 12 12 12h100c6.6 0 12-5.4 12-12s-5.4-12-12-12z" data-original="#000000"></path>
+                                  </svg>
+                              </button>
+                              <span class="font-semibold text-base leading-[18px]">1</span>
+                              <button type="button"
+                                  class="flex items-center justify-center w-[18px] h-[18px] cursor-pointer bg-slate-800 outline-none rounded-full">
+                                  <svg xmlns="http://www.w3.org/2000/svg" class="w-2 fill-white" viewBox="0 0 42 42">
+                                      <path d="M37.059 16H26V4.941C26 2.224 23.718 0 21 0s-5 2.224-5 4.941V16H4.941C2.224 16 0 18.282 0 21s2.224 5 4.941 5H16v11.059C16 39.776 18.282 42 21 42s5-2.224 5-4.941V26h11.059C39.776 26 42 23.718 42 21s-2.224-5-4.941-5z" data-original="#000000"></path>
+                                  </svg>
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="bg-white rounded-md px-4 py-6 h-max shadow-sm border border-gray-200">
+                  <ul class="text-slate-500 font-medium space-y-4">
+                      <li class="flex flex-wrap gap-4 text-sm">Subtotal <span class="ml-auto font-semibold text-slate-900">$200.00</span></li>
+                      <li class="flex flex-wrap gap-4 text-sm">Shipping <span class="ml-auto font-semibold text-slate-900">$2.00</span></li>
+                      <li class="flex flex-wrap gap-4 text-sm">Tax <span class="ml-auto font-semibold text-slate-900">$4.00</span></li>
+                      <hr class="border-slate-300" />
+                      <li class="flex flex-wrap gap-4 text-sm font-semibold text-slate-900">Total <span class="ml-auto">$206.00</span></li>
+                  </ul>
+                  <div class="mt-8 space-y-4">
+                      <button type="button" class="text-sm px-4 py-2.5 w-full font-medium tracking-wide bg-slate-800 hover:bg-slate-900 text-white rounded-md cursor-pointer">Buy Now</button>
+                      <button type="button" class="text-sm px-4 py-2.5 w-full font-medium tracking-wide bg-slate-50 hover:bg-slate-100 text-slate-900 border border-gray-300 rounded-md cursor-pointer">Continue Shopping</button>
+                  </div>
+                  <div class="mt-5 flex flex-wrap justify-center gap-4">
+                      <img src='https://readymadeui.com/images/master.webp' alt="card1" class="w-10 object-contain" />
+                      <img src='https://readymadeui.com/images/visa.webp' alt="card2" class="w-10 object-contain" />
+                      <img src='https://readymadeui.com/images/american-express.webp' alt="card3" class="w-10 object-contain" />
+                  </div>
+              </div>
+          </div>
+      </div>
