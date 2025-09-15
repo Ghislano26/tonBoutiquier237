@@ -8,8 +8,9 @@ export class Product extends Model{
     declare name: string;
     declare price: number;
     declare description: string;
-    declare image: string;
+    declare image?: string;
     declare stock: number;
+    declare category?: string;
 
 }
 
@@ -37,6 +38,9 @@ Product.init({
     stock: {
         type: DataTypes.INTEGER,
         defaultValue: 0
+    },
+    category: {
+        type: DataTypes.STRING,
     },
     
 

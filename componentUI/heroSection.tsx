@@ -33,13 +33,14 @@ const audioPlay = ()=>{
 
                 <span><ConfettiFireworks/></span>
                 <h1 className='text-4xl'>Exprimez <br /> <TypingAnimation className='text-orange-500'>Votre style,</TypingAnimation> Vivez la tendance</h1>
-                <h1><span><SparklesText className='text-orange-500 font-light italic text-[2rem] md:text-[4rem]'>Ton Boutiquier.com,</SparklesText></span>la boutique qui <span className='text-orange-700 font-bold'>dechire</span> à yaounde ! Mode, Style... et a tres bas prix !</h1>
-                <AvatarCircles numPeople={5} avatarUrls={avatars}/>
+                <h1><span><SparklesText className='text-orange-400 font-light italic text-[2rem] md:text-[4rem]'>Ton Boutiquier.com,</SparklesText></span><br />la boutique qui <span className='text-orange-700 font-bold'>dechire</span> à yaounde ! Mode, Style... et a tres bas prix !</h1>
+                <AvatarCircles numPeople={12} avatarUrls={avatars}/>
                 <AnimatedSubscribeButton onClick={audioPlay}>
                   <span>Voir les produits chauds !! </span>
                   <span>Okay c'est partie</span>
                 </AnimatedSubscribeButton>
                 <audio ref={audioRef} src={'/preloader.mp3'} preload='auto'></audio>
+                
         </div>
 
 
@@ -48,7 +49,6 @@ const audioPlay = ()=>{
         <div className='flex-1'>
           <AnimatedListHero/>
         </div>
-
 
     </div>
   )

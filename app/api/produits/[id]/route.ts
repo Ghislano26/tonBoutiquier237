@@ -4,6 +4,22 @@ import { Product } from "@/models";
 
 
 
+
+
+export async function GET(req:Request, {params}:{params: {id: string}}){
+        try {
+            const product = await Product.findByPk(params.id)
+            if(!product){
+                return NextResponse.json({error: "Produit introuvable"}, {status: 404})
+            }
+            return NextResponse.json(product)
+        } catch (error) {
+            console.error("erreur lors de la recherche de l'article", error);
+            return NextResponse.json({error: 'research failed', message: (error as Error).message}, {status: 500})
+        }
+}
+
+
 export async function DELETE(req:NextRequest, {params}:{params: {id: string}}) {
     const user = await VerifyToken(req);
     if (user instanceof Response) {
@@ -45,3 +61,5 @@ export async function PUT(req:NextRequest, {params}:{params: {id: string}}) {
     }
    
 }
+
+

@@ -21,6 +21,7 @@ import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@her
 
 const navigation = {
   categories: [
+    
     {
       id: 'women',
       name: 'Catalogue',
@@ -34,14 +35,14 @@ const navigation = {
         {
           name: 'Basic Tees',
           href: '#',
-          imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/mega-menu-category-02.jpg',
+          imageSrc: '/article/nike/sandale1.jpg',
           imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
         },
       ],
       sections: [
         {
-          id: 'clothing',
-          name: 'Clothing',
+          id: 'vêtements',
+          name: 'Vêtements',
           items: [
             { name: 'Tops', href: '#' },
             { name: 'Dresses', href: '#' },
@@ -55,8 +56,8 @@ const navigation = {
           ],
         },
         {
-          id: 'accessories',
-          name: 'Accessories',
+          id: 'accessoires',
+          name: 'Accessoires',
           items: [
             { name: 'Watches', href: '#' },
             { name: 'Wallets', href: '#' },
@@ -67,8 +68,8 @@ const navigation = {
           ],
         },
         {
-          id: 'brands',
-          name: 'Brands',
+          id: 'chaussures',
+          name: 'Chaussures',
           items: [
             { name: 'Full Nelson', href: '#' },
             { name: 'My Way', href: '#' },
@@ -87,13 +88,13 @@ const navigation = {
           name: 'New Arrivals',
           href: '#',
           imageSrc:
-            'https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg',
+            '/article/welcome.jpg',
           imageAlt: 'Drawstring top with elastic loop closure and textured interior padding.',
         },
         {
           name: 'Artwork Tees',
           href: '#',
-          imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-02-image-card-06.jpg',
+          imageSrc: '/article/nike/sandale3.jpg',
           imageAlt:
             'Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.',
         },
@@ -139,7 +140,7 @@ const navigation = {
   ],
   pages: [
     { name: 'Arrivages', href: '#' },
-    { name: 'Favoris', href: '#' },
+    { name: 'Accueil', href: '/' },
     { name: 'Contact', href: '#' },
   ],
 }
@@ -270,10 +271,10 @@ export default function Navbar() {
 
       <header className="relative bg-white">
         <p className="flex h-10 items-center justify-center bg-black px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
-            <SparklesText className='text-[1.2rem] md:text-[1.6rem] text-orange-300 font-extralight'>Ton Boutiquier 237</SparklesText>
+            <SparklesText className='text-[1.2rem] md:text-[1.6rem] text-orange-200 font-extralight'>Ton Boutiquier 237</SparklesText>
         </p>
 
-        <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <nav aria-label="Top" className="mx-auto max-w-7xl px-4 py-0 md:py-4 sm:px-6 lg:px-8">
           <div className="border-b border-gray-200">
             <div className="flex h-16 items-center">
               <button
@@ -289,14 +290,14 @@ export default function Navbar() {
               {/* Logo */}
 
               <div className="ml-4 flex lg:ml-0">
-                <a href="#">
+                <Link href={'/'}>
                   <span className="sr-only">Your Company</span>
                   <img
                     alt=""
                     src="/logo.png"
-                    className="h-10 w-auto"
+                    className="h-15 w-auto"
                   />
-                </a>
+                </Link>
               </div>
 
               {/* Flyout menus */}
@@ -386,6 +387,9 @@ export default function Navbar() {
                   
                   <span aria-hidden="true" className="h-6 w-px bg-gray-200" />
                   <Link href={'signup'} className="text-sm font-medium text-gray-700 hover:text-gray-800"> Creer un compte</Link>
+
+                  <span aria-hidden="true" className="h-6 w-px bg-gray-200" />
+                  <Link href={'admin/login'} className="text-sm font-medium text-gray-700 hover:text-gray-800"> Admin</Link>
                  
                 </div>
                 

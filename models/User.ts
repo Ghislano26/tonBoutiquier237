@@ -7,6 +7,7 @@ export class User extends Model{
     declare name: string;
     declare email: string;
     declare password: string;
+    declare role?: string
 }
 
 User.init({
@@ -27,6 +28,10 @@ User.init({
     password:{
         type: DataTypes.STRING(255),
         allowNull: false,
+    },
+    role:{
+        type: DataTypes.STRING(255),
+        defaultValue: 'user',
     }},
 
 

@@ -3,8 +3,6 @@ import User from "@/models/User";
 import sequelize from "@/lib/sequelize";
 import bcrypt from 'bcrypt'
 
-
-
 export const runtime = 'nodejs';
 
 
@@ -12,7 +10,7 @@ export async function POST(req:Request) {
     try {
         sequelize.authenticate();
         const body = await req.json();
-        const {name, email, password} = body;
+        const {name, email, password, role} = body;
 
         // losqu'il veut creer un compte on verifie si l'email qu'il entre exite deja
         const existing = await User.findOne({
@@ -27,7 +25,7 @@ export async function POST(req:Request) {
 
         const hashPassword = await bcrypt.hash(password,10);
 
-        const newUser = await User.create({name, email, password: hashPassword});
+        const newUser = await User.create({name, email, password: hashPassword, role});
 
         return NextResponse.json({message: 'enregistrement reussi' ,newUser}, {status: 201});
         

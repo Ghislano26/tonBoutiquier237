@@ -27,10 +27,11 @@ export async function POST(req: Request) {
 
         const token = jwt.sign({
             id: user.id,
-            email: user.email
+            email: user.email,
+            role: user.role,
         },process.env.JWT_SECRET!, {expiresIn: '48h'});
 
-        return NextResponse.json({message: 'connexion reussi', token}, {status: 200});
+        return NextResponse.json({message: 'connexion reussi', token, role: user.role}, {status: 200});
         
     } catch (error) {
         NextResponse.json({error: 'Login failed', message: (error as Error).message}, {status: 500})
